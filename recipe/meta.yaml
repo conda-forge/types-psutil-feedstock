@@ -24,7 +24,8 @@ requirements:
 test:
   files:  # [linux]
     - stubtest_allowlist.txt  # [linux]
-  commands: [python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt]  # [linux]
+  commands:  # [linux]
+    - python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt  # [linux]
   requires: [mypy]  # [linux]
 
 about:
