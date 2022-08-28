@@ -26,7 +26,8 @@ test:
     - stubtest_allowlist.txt  # [linux]
   commands:  # [linux]
     - python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt  # [linux]
-  requires: [mypy]  # [linux]
+  requires:  # [linux]
+    - mypy  # [linux]
 
 about:
   home: https://github.com/python/typeshed
