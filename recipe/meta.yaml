@@ -1,5 +1,5 @@
 {% set name = "types-psutil" %}
-{% set version = "5.9.3" %}
+{% set version = "5.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-psutil-{{ version }}.tar.gz
-  sha256: 0150cbf39c6f8287666c65ee4225ea4d6b09abdf742175556a365eb2a67fc33c
+  sha256: bef91de096b77ff7bc3a92bafe466ee55f842286c1d734658b7c26b259078253
 
 build:
   noarch: python
@@ -22,9 +22,9 @@ requirements:
     - python >=3
 
 test:
-  files: [ "stubtest_allowlist.txt" ]  # [linux]
-  commands: [ "python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt" ]  # [linux]
-  requires: [ mypy ]  # [linux]
+  files: [stubtest_allowlist.txt]  # [linux]
+  commands: [python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt]  # [linux]
+  requires: [mypy]  # [linux]
 
 about:
   home: https://github.com/python/typeshed
