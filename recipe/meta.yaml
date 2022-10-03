@@ -1,5 +1,5 @@
 {% set name = "types-psutil" %}
-{% set version = "5.9.5" %}
+{% set version = "5.9.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-psutil-{{ version }}.tar.gz
-  sha256: bef91de096b77ff7bc3a92bafe466ee55f842286c1d734658b7c26b259078253
+  sha256: d1a157fd132aa34be544fa9e09dc5c37b92c9d3a2917bce9c564354f50e71ffb
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,11 +22,11 @@ requirements:
     - python >=3
 
 test:
-  files:  # [linux]
+  files:   # [linux]
     - stubtest_allowlist.txt  # [linux]
-  commands:  # [linux]
+  commands:   # [linux]
     - python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt  # [linux]
-  requires:  # [linux]
+  requires:   # [linux]
     - mypy  # [linux]
 
 about:
