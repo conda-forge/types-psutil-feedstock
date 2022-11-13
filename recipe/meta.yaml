@@ -22,12 +22,17 @@ requirements:
     - python >=3
 
 test:
-  files:   # [linux]
-    - stubtest_allowlist.txt  # [linux]
-  commands:   # [linux]
-    - python -m mypy.stubtest --ignore-missing-stub psutil  --allowlist stubtest_allowlist.txt  # [linux]
-  requires:   # [linux]
-    - mypy  # [linux]
+  files:
+    - stubtest_allowlist.txt
+    - stubtest_allowlist_linux.txt
+    - stubtest_allowlist_darwin.txt
+    - stubtest_allowlist_win32.txt
+  commands:
+    - python -m mypy.stubtest psutil  --allowlist stubtest_allowlist.txt --allowlist stubtest_allowlist_linux.txt  # [linux]
+    - python -m mypy.stubtest psutil  --allowlist stubtest_allowlist.txt --allowlist stubtest_allowlist_darwin.txt  # [osx]
+    - python -m mypy.stubtest psutil  --allowlist stubtest_allowlist.txt --allowlist stubtest_allowlist_win32.txt  # [win32]
+  requires:
+    - mypy
 
 about:
   home: https://github.com/python/typeshed
