@@ -2,8 +2,3 @@ psutil._psosx
 psutil._psutil_windows
 psutil._psutil_osx
 psutil._pswindows
-
-# not defined in conda's <sys/resource.h>
-psutil.RLIMIT_RTTIME
-psutil._psutil_posix.RLIMIT_RTTIME
-psutil._psutil_linux.check_pid_range
