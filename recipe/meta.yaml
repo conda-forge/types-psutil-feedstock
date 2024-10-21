@@ -1,5 +1,5 @@
 {% set name = "types-psutil" %}
-{% set version = "5.9.5.10" %}
+{% set version = "5.9.5.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-psutil-{{ version }}.tar.gz
-  sha256: 26206682efe011bc84f15f8d6539c714f3d598843e2b4c88ef371ecb1a34829b
+  sha256: 3d59da0758f056bfb59fef757366e538c5dd5473d81c35b38956624ae2484f31 
 
 build:
   noarch: python
