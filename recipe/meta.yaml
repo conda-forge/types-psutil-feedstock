@@ -1,13 +1,13 @@
 {% set name = "types-psutil" %}
-{% set version = "7.2.2.20260518" %}
+{% set version = "7.2.2.20260827" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9f825f631463a5b4d26f19f63aebc9ec25f01140d655026f3ad8a67841f9b331
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 3c6067dba47c700495ca493f07b11e866ba13de223aabb26da555f9c86ae0b1f
 
 build:
   noarch: python
